@@ -1,0 +1,81 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ["'Syne'", "Georgia", "serif"],
+        body: ["'Inter'", "sans-serif"],
+        mono: ["'Fira Code'", "monospace"],
+      },
+      colors: {
+        primary: {
+          50:  "#edfafa",
+          100: "#d5f5f6",
+          200: "#afecee",
+          300: "#7edce2",
+          400: "#16bdca",
+          500: "#0694a2",
+          600: "#047481",
+          700: "#036672",
+          800: "#05505c",
+          900: "#014451",
+        },
+        slate: {
+          50:  "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+          400: "#94a3b8",
+          500: "#64748b",
+          600: "#475569",
+          700: "#334155",
+          800: "#1e293b",
+          900: "#0f172a",
+        },
+        accent: {
+          50:  "#fdf4ff",
+          100: "#fae8ff",
+          200: "#f5d0fe",
+          300: "#eca8fc",
+          400: "#d946ef",
+          500: "#a21caf",
+          600: "#86198f",
+          700: "#701a75",
+        },
+        emerald: {
+          50:  "#ecfdf5",
+          100: "#d1fae5",
+          200: "#a7f3d0",
+          300: "#6ee7b7",
+          400: "#34d399",
+          500: "#10b981",
+          600: "#059669",
+          700: "#047857",
+        },
+      },
+      animation: {
+        "fade-in":       "fadeIn 0.4s ease-out",
+        "slide-up":      "slideUp 0.4s ease-out",
+        "slide-in-right":"slideInRight 0.3s ease-out",
+        "pulse-slow":    "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "float":         "float 6s ease-in-out infinite",
+      },
+      keyframes: {
+        fadeIn:       { from: { opacity: 0 }, to: { opacity: 1 } },
+        slideUp:      { from: { opacity: 0, transform: "translateY(20px)" }, to: { opacity: 1, transform: "translateY(0)" } },
+        slideInRight: { from: { opacity: 0, transform: "translateX(20px)" }, to: { opacity: 1, transform: "translateX(0)" } },
+        float:        { "0%, 100%": { transform: "translateY(0px)" }, "50%": { transform: "translateY(-10px)" } },
+      },
+      boxShadow: {
+        card:       "0 4px 24px -4px rgba(0,0,0,0.10)",
+        "card-hover":"0 8px 40px -4px rgba(0,0,0,0.16)",
+        glow:       "0 0 30px rgba(6,148,162,0.25)",
+      },
+    },
+  },
+  plugins: [],
+}
